@@ -1,6 +1,6 @@
 package com.creational.factory;
 
-public class ProductFactoryTest {
+public class ProductSelection {
 	 public static void main(String[] args) {
 	      ProductFactory ProductFactory = new ProductFactory();
 

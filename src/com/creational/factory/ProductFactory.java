@@ -1,20 +1,20 @@
 package com.creational.factory;
-public class ShapeFactory {
+public class ProductFactory {
 
     //use getShape method to get object of type shape
-    public Shape getShape(String shapeType){
-        if(shapeType == null){
+    public Product getProduct(String productType) {
+        if (productType == null) {
             return null;
-        }
-        if(shapeType.equalsIgnoreCase("CIRCLE")){
-            return new Circle();
-
-        } else if(shapeType.equalsIgnoreCase("RECTANGLE")){
-            return new Rectangle();
-
-        } else if(shapeType.equalsIgnoreCase("SQUARE")){
-            return new Square();
+        } else if (productType.equalsIgnoreCase("PSTN")) {
+            return new PSTN();
+        } else if (productType.equalsIgnoreCase("Broadband") || productType.equalsIgnoreCase("BB")) {
+            return new Broadband();
+        } else if (productType.equalsIgnoreCase("TV") || productType.equalsIgnoreCase("Vision")) {
+            return new TV();
+        } else if (productType.equalsIgnoreCase("Mobile")) {
+            return new Mobile();
         }
 
         return null;
     }
+ }
